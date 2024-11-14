@@ -1,9 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
-with open("logistic_regression_model.pkl", "rb") as file:
-    model = pickle.load(file)
+model = joblib.load("logistic_regression_model.pkl")
+
 
 st.title("Diabetes Prediction App")
 
